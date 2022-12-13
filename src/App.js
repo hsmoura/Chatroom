@@ -34,7 +34,7 @@ function App() {
 
 function SignIn() {
   const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthprovider();
+    const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   };
   return <button onClick={signInWithGoogle}>Sign in with Google</button>;
@@ -42,7 +42,7 @@ function SignIn() {
 
 function SignOut() {
   return (
-    auth.currentUser && <button onClick={() => auth.SignOut()}>Sign out</button>
+    auth.currentUser && <button onClick={() => auth.signOut()}>Sign out</button>
   );
 }
 
